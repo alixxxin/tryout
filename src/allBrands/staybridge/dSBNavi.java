@@ -1,5 +1,5 @@
 /**
- * 
+ * For this class, just need to override stuff
  */
 package allBrands.staybridge;
 

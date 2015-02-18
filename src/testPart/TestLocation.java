@@ -22,10 +22,15 @@ public class TestLocation {
 	@Test(dependsOnMethods = "testLocationLanding")
 	public void testLocationPageHotelName(){
 //		System.out.println(TestCommonParts.website.glocation().locationHotelName().getText());
-		Assert.assertEquals(colorManager.colorIdenti(TestCommonParts.website.glocation().locationHotelName().getCssValue(TestCommonParts.website.getdata().dlocation().hotelNameColor()[1])),
-				"#111111");//TestCommonParts.website.getdata().dlocation().hotelNameColor()[0]);
-		Assert.assertEquals(TestCommonParts.website.glocation().locationHotelName().getCssValue(TestCommonParts.website.getdata().dlocation().hotelNameSize()[1]),
+Assert.assertEquals(TestCommonParts.website.glocation().locationHotelName().getCssValue(TestCommonParts.website.getdata().dlocation().hotelNameSize()[1]),
 				"14px");//TestCommonParts.website.getdata().dlocation().hotelNameSize()[0]);
+	}
+	
+	@Test(dependsOnMethods = "testLocationLanding")
+	public void test(){
+		Assert.assertEquals(colorManager.colorIdenti(TestCommonParts.website.glocation().locationHotelName().getCssValue(TestCommonParts.website.getdata().dlocation().hotelNameColor()[1])),
+				TestCommonParts.website.getdata().dlocation().hotelNameColor()[0]);
+		
 	}
 	
 	@Test(dependsOnMethods = "testLocationLanding")
